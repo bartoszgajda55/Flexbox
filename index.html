@@ -6,11 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .container-1 {
+        @media(min-width: 768px) {
+            .container-1 {
             display: flex;
-            align-items: flex-start;
+            /* align-items: flex-start; */
+            /* align-items: center; */
+            /* flex-direction: column; */
+            }
+        .container-2 {
+            display: flex;
+            /* justify-content: flex-start; */
+            justify-content: space-between;
+            }
         }
-        .container-1 div {
+        .container-1 div, .container-2 div {
             border: 1px solid #ccc;
             padding: 10px
         }
@@ -26,21 +35,38 @@
             flex: 1;
             order: 3;
         }
+        .container-2-box {
+            flex-basis: 30%;
+        }
     </style>
 </head>
 <body>
     <div class="container-1">
         <div class="box-1">
-            <h3>Box One</h3>
+            <h3>Box 1</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
         </div>
         <div class="box-2">
-            <h3>Box Two</h3>
+            <h3>Box 2</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
         </div>
         <div class="box-3">
-            <h3>Box Three</h3>
+            <h3>Box 3</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="container-2-box">
+            <h3>Box 4</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+        </div>
+        <div class="container-2-box">
+            <h3>Box 5</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+        </div>
+        <div class="container-2-box">
+            <h3>Box 6</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
         </div>
     </div>
 </body>
